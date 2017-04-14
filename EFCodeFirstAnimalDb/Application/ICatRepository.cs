@@ -1,4 +1,5 @@
 ﻿using System;
+using EFCodeFirstAnimalDb.Domain;
 
 namespace EFCodeFirstAnimalDb
 {

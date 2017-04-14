@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+using EFCodeFirstAnimalDb.Domain;
+using EFCodeFirstAnimalDb.Infrastructure;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Presentation
 {
     public partial class AddCat : System.Web.UI.Page
     {

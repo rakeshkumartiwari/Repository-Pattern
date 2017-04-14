@@ -1,6 +1,8 @@
 ﻿using System;
+using EFCodeFirstAnimalDb.Domain;
+using EFCodeFirstAnimalDb.Infrastructure;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Presentation
 {
     public partial class UpdateCat : System.Web.UI.Page
     {

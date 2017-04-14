@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddCat.aspx.cs" Inherits="EFCodeFirstAnimalDb.AddCat" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UpdateCat.aspx.cs" Inherits="EFCodeFirstAnimalDb.Presentation.UpdateCat" %>
 
 <!DOCTYPE html>
 
@@ -17,7 +17,6 @@
                     <td>
                         <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
                     </td>
-                    
                 </tr>
                 <tr>
                     <td>
@@ -26,21 +25,16 @@
                     <td>
                         <asp:TextBox ID="txtColor" runat="server"></asp:TextBox>
                     </td>
-                     
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:Button ID="btnReg" runat="server" OnClick="btnReg_Click" Text="Register" />
-                        <asp:Button ID="btnSearch" runat="server" OnClick="btnSearch_Click" Text="Search" />
+                        <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" />
                         <asp:Button ID="btnViewAll" runat="server" OnClick="btnViewAll_Click" Text="View All" />
                     </td>
                 </tr>
-                <tr>
-                    <td>
-                        <asp:Label ID="lblError" runat="server" ForeColor="red"></asp:Label>
-                    </td>
-                </tr>
             </table>
+
+
         </div>
     </form>
 </body>

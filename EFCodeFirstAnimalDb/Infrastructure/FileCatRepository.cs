@@ -1,4 +1,6 @@
-﻿namespace EFCodeFirstAnimalDb
+﻿using EFCodeFirstAnimalDb.Domain;
+
+namespace EFCodeFirstAnimalDb
 {
    public class FileCatRepository : ICatRepository
     {

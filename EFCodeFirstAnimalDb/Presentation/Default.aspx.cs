@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Presentation
 {
     public partial class Default : System.Web.UI.Page
     {

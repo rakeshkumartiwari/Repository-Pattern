@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EFCodeFirstAnimalDb.Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EFCodeFirstAnimalDb.Presentation.Default" %>
 
 <!DOCTYPE html>
 

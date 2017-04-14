@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Domain
 {
     public class Cat
     {

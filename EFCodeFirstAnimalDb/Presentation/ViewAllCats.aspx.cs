@@ -1,7 +1,7 @@
 ﻿using System;
-using System.Linq;
+using EFCodeFirstAnimalDb.Infrastructure;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Presentation
 {
     public partial class ViewAllCat : System.Web.UI.Page
     {

@@ -74,60 +74,61 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="AddCat.aspx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Presentation\AddCat.aspx" />
+    <Content Include="Presentation\Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="SearchCat.aspx" />
-    <Content Include="UpdateCat.aspx" />
-    <Content Include="ViewAllCats.aspx" />
+    <Content Include="Presentation\SearchCat.aspx" />
+    <Content Include="Presentation\UpdateCat.aspx" />
+    <Content Include="Presentation\ViewAllCats.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddCat.aspx.cs">
+    <Compile Include="Presentation\AddCat.aspx.cs">
       <DependentUpon>AddCat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="AddCat.aspx.designer.cs">
+    <Compile Include="Presentation\AddCat.aspx.designer.cs">
       <DependentUpon>AddCat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="AnimalDB.cs" />
-    <Compile Include="Cat.cs" />
-    <Compile Include="Default.aspx.cs">
+    <Compile Include="Infrastructure\AnimalDB.cs" />
+    <Compile Include="Domain\Cat.cs" />
+    <Compile Include="Presentation\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Default.aspx.designer.cs">
+    <Compile Include="Presentation\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="EfCatRepository.cs" />
-    <Compile Include="FileCatRepository.cs" />
+    <Compile Include="Infrastructure\EfCatRepository.cs" />
+    <Compile Include="Infrastructure\FileCatRepository.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="ICatRepository.cs" />
+    <Compile Include="Application\ICatRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchCat.aspx.cs">
+    <Compile Include="Presentation\SearchCat.aspx.cs">
       <DependentUpon>SearchCat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SearchCat.aspx.designer.cs">
+    <Compile Include="Presentation\SearchCat.aspx.designer.cs">
       <DependentUpon>SearchCat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="UpdateCat.aspx.cs">
+    <Compile Include="Presentation\UpdateCat.aspx.cs">
       <DependentUpon>UpdateCat.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UpdateCat.aspx.designer.cs">
+    <Compile Include="Presentation\UpdateCat.aspx.designer.cs">
       <DependentUpon>UpdateCat.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ViewAllCats.aspx.cs">
+    <Compile Include="Presentation\ViewAllCats.aspx.cs">
       <DependentUpon>ViewAllCats.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ViewAllCats.aspx.designer.cs">
+    <Compile Include="Presentation\ViewAllCats.aspx.designer.cs">
       <DependentUpon>ViewAllCats.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

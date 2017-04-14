@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EFCodeFirstAnimalDb {
+namespace EFCodeFirstAnimalDb.Presentation {
     
     
     public partial class AddCat {

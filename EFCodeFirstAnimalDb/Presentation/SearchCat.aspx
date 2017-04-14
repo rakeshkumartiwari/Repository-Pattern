@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SearchCat.aspx.cs" Inherits="EFCodeFirstAnimalDb.SearchCat" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SearchCat.aspx.cs" Inherits="EFCodeFirstAnimalDb.Presentation.SearchCat" %>
 
 <!DOCTYPE html>
 
