@@ -30,6 +30,7 @@
                     <td colspan="2">
                         <asp:Button ID="btnUpdate" runat="server" OnClick="btnUpdate_Click" Text="Update" />
                         <asp:Button ID="btnViewAll" runat="server" OnClick="btnViewAll_Click" Text="View All" />
+                        <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" />
                     </td>
                 </tr>
             </table>

@@ -9,9 +9,17 @@ namespace EFCodeFirstAnimalDb.Presentation
         {
             if (!IsPostBack)
             {
-                var repository = new EfCatRepository();
-                gridViewAllCats.DataSource = repository.GetAllCats();
+                #region Using Sql
+                var repository = new SqlCatRepository();
+                repository.GetCats();
+                gridViewAllCats.DataSource = repository.GetCats();
                 gridViewAllCats.DataBind();
+                #endregion
+                #region Using Entity Framework
+                //var repository = new EfCatRepository();
+                //gridViewAllCats.DataSource = repository.GetAllCats();
+                //gridViewAllCats.DataBind();
+                #endregion
             }
         }
 

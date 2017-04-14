@@ -1,7 +1,7 @@
 ﻿using System;
 using EFCodeFirstAnimalDb.Domain;
 
-namespace EFCodeFirstAnimalDb
+namespace EFCodeFirstAnimalDb.Interface
 {
    public interface ICatRepository
    {
@@ -14,13 +14,5 @@ namespace EFCodeFirstAnimalDb
         {
             throw new NotImplementedException();
         }
-    }
-
-    public class SqlCatRepository : ICatRepository
-    {
-       public void Add(Cat cat)
-       {
-           throw new NotImplementedException();
-       }
     }
 }

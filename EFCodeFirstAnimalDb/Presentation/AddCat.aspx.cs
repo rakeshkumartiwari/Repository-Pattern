@@ -28,9 +28,18 @@ namespace EFCodeFirstAnimalDb.Presentation
         {
             try
             {
-                var cat = new Cat { Id = GenerateId(),Name = txtName.Text, Color = txtColor.Text };
-                var repository = new EfCatRepository();
+                #region Using Sql
+
+                var repository = new SqlCatRepository();
+                var cat = new Cat { Id = GenerateId(), Name = txtName.Text, Color = txtColor.Text };
                 repository.Add(cat);
+
+                #endregion
+                #region Using Entity Framework
+                //var cat = new Cat { Id = GenerateId(),Name = txtName.Text, Color = txtColor.Text };
+                //var repository = new EfCatRepository();
+                //repository.Add(cat);
+                #endregion
                 Response.Redirect("ViewAllCats.aspx");
             }
             catch (Exception exception)
@@ -38,7 +47,7 @@ namespace EFCodeFirstAnimalDb.Presentation
 
                 lblError.Text = exception.Message;
             }
-           
+
         }
 
 

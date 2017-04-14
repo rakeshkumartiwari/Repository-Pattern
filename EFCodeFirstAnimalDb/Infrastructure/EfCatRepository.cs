@@ -1,26 +1,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using EFCodeFirstAnimalDb.Domain;
+using EFCodeFirstAnimalDb.Interface;
 
 namespace EFCodeFirstAnimalDb.Infrastructure
 {
     public class EfCatRepository : ICatRepository
     {
-        AnimalDB db = new AnimalDB();
+        readonly AnimalDB _db = new AnimalDB();
         public void Add(Cat cat)
         {
-            db.Cats.Add(cat);
-            db.SaveChanges();
+            _db.Cats.Add(cat);
+            _db.SaveChanges();
         }
 
         public List<Cat> GetAllCats()
         {
-            return db.Cats.ToList();
+            return _db.Cats.ToList();
         }
 
         public Cat GetCatById(string id)
         {
-            Cat cat = db.Cats.Single(c => c.Id == id);
+            Cat cat = _db.Cats.Single(c => c.Id == id);
+            return cat;
+        }
+        public List<Cat> GetCatByName(string name)
+        {
+            List<Cat> cat = _db.Cats.Where(c => c.Name == name).ToList();
             return cat;
         }
         public void Update(Cat cat)
@@ -28,7 +34,14 @@ namespace EFCodeFirstAnimalDb.Infrastructure
             Cat fetchedCat = GetCatById(cat.Id);
             fetchedCat.Name = cat.Name;
             fetchedCat.Color = cat.Color;
-            db.SaveChanges();
+            _db.SaveChanges();
+        }
+
+        public void Delete(string id)
+        {
+            var fetchedCat = _db.Cats.SingleOrDefault(c => c.Id == id);
+            _db.Cats.Remove(fetchedCat);
+            _db.SaveChanges();
         }
     }
 }

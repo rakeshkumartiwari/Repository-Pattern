@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using EFCodeFirstAnimalDb.Domain;
+using System.Data;
+using EFCodeFirstAnimalDb.Infrastructure;
 
 namespace EFCodeFirstAnimalDb.Presentation
 {
@@ -24,22 +23,40 @@ namespace EFCodeFirstAnimalDb.Presentation
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-            var db = new AnimalDB();
-            
-              List<Cat> listCats = db.Cats.Where(c => c.Name == txtSearch.Text).ToList();
+            var repository = new SqlCatRepository();
+            DataSet objDataSet = repository.GetCatByName(txtSearch.Text);
 
-               if (listCats.Count == 0)
-                {
-                    lblError.Text = "Please check the name, this name is not registered.";
-                }
-                else
-                {
-                    gridSearch.DataSource = listCats.ToList();
-                    gridSearch.DataBind();
-                    lblError.Text = "";
-                }
-           
+            if (objDataSet.Tables[0].Rows.Count == 0)
+            {
+                lblError.Text = "Please check the name, this name is not registered.";
+            }
+            else
+            {
+                gridSearch.DataSource = objDataSet;
+                gridSearch.DataBind();
+            }
             
+
+            #region Using Entity Framework
+
+            //var repository = new EfCatRepository();
+
+            //List<Cat> catList = repository.GetCatByName(txtSearch.Text);
+
+
+            //if (catList.Count == 0)
+            //{
+            //    lblError.Text = "Please check the name, this name is not registered.";
+            //}
+            //else
+            //{
+            //    gridSearch.DataSource = catList;
+            //    gridSearch.DataBind();
+            //    lblError.Text = "";
+            //}
+
+            #endregion
+
         }
     }
 }
